@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Confetti from 'react-confetti';
-import f1 from '../assets/friend1.mp4';
-import f2 from '../assets/friend2.mp4';
-import f3 from '../assets/friend3.mp4';
+import f1 from '../../public/friend1.mp4';
+import f2 from '../../public/friend2.mp4';
+import f3 from '../../public/friend3.mp4';
 import '../App.css';
 
 const videos = [f1, f2, f3];
