@@ -77,6 +77,7 @@ const SurpriseSection: React.FC = () => {
               <video
                 key={i}
                 src={src}
+                 autoPlay muted loop
                 ref={(el) => (videoRefs.current[i] = el)}
                 onEnded={handleEnded}
                 className={`rounded-xl shadow-2xl transition-all duration-700 ${
