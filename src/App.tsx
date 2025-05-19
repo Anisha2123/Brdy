@@ -59,7 +59,7 @@ const galleryImages = [i6, i7, i9, i10];
     
 {/* <BirthdayGallery /> */}
        <Greeting />
-       <FireworksEffect />
+       {/* <FireworksEffect /> */}
         <CurtainGallery />
       <Letter />
       {/* <Gallery /> */}

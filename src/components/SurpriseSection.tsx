@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Confetti from 'react-confetti';
+import f1 from '../../public/friend1.mp4';
+import f2 from '../../public/friend2.mp4';
+import f3 from '../../public/friend3.mp4';
 import '../App.css';
 
-// ✅ Use direct paths (videos placed in /public)
-const videos = ['/friend1.mp4', '/friend2.mp4', '/friend3.mp4'];
+const videos = [f1, f2, f3];
 
 const confettiConfigs = [
   { colors: ['#ff69b4', '#ffb6c1', '#db7093'], numberOfPieces: 200 },
@@ -17,6 +19,15 @@ const SurpriseSection: React.FC = () => {
   const [confettiIndex, setConfettiIndex] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
+
+
+//    useEffect(() => {
+//   if (showVideos && videoRefs.current[currentIndex]) {
+//     videoRefs.current[currentIndex]?.play().catch((err) => {
+//       console.warn("Autoplay failed", err);
+//     });
+//   }
+// }, [showVideos, currentIndex]);
 
   useEffect(() => {
     setWindowSize({ width: window.innerWidth, height: window.innerHeight });
@@ -66,9 +77,7 @@ const SurpriseSection: React.FC = () => {
               <video
                 key={i}
                 src={src}
-                autoPlay
-                muted
-                loop
+                 autoPlay muted loop
                 ref={(el) => (videoRefs.current[i] = el)}
                 onEnded={handleEnded}
                 className={`rounded-xl shadow-2xl transition-all duration-700 ${
@@ -77,10 +86,7 @@ const SurpriseSection: React.FC = () => {
                     : 'opacity-50 scale-90 grayscale'
                 }`}
                 controls={i === currentIndex}
-                style={{
-                  width: i === currentIndex ? '500px' : '300px',
-                  height: 'auto',
-                }}
+                style={{ width: i === currentIndex ? '500px' : '300px', height: 'auto' }}
               />
             ))}
           </div>
