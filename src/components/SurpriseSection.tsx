@@ -21,13 +21,13 @@ const SurpriseSection: React.FC = () => {
   const [windowSize, setWindowSize] = useState({ width: 0, height: 0 });
 
 
-   useEffect(() => {
-  if (showVideos && videoRefs.current[currentIndex]) {
-    videoRefs.current[currentIndex]?.play().catch((err) => {
-      console.warn("Autoplay failed", err);
-    });
-  }
-}, [showVideos, currentIndex]);
+//    useEffect(() => {
+//   if (showVideos && videoRefs.current[currentIndex]) {
+//     videoRefs.current[currentIndex]?.play().catch((err) => {
+//       console.warn("Autoplay failed", err);
+//     });
+//   }
+// }, [showVideos, currentIndex]);
 
   useEffect(() => {
     setWindowSize({ width: window.innerWidth, height: window.innerHeight });

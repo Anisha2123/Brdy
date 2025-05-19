@@ -12,7 +12,6 @@ import Greeting from './components/Greeting';
 import Letter from './components/Letter';
 import Quiz from './components/Quiz';
 import GiftBox from './components/GiftBox';
-import BackgroundMusic from './components/BackgroundMusic';
 import PhotoSlideshow from './components/PhotoSlideshow';
 import FireworksEffect from './components/FireworksEffect';
 // import WishesBoard from './components/WishesBoard';
@@ -61,7 +60,6 @@ const galleryImages = [i6, i7, i9, i10];
 {/* <BirthdayGallery /> */}
        <Greeting />
        <FireworksEffect />
-      <BackgroundMusic />
         <CurtainGallery />
       <Letter />
       {/* <Gallery /> */}
